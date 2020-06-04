@@ -9,7 +9,7 @@
   <body>
     <h1>Cotiza Criptomonedas al Instante</h1>
     <form class="js-form">
-      <select id="moneda" class="form-control">
+      <select class="js-currency">
         <option value="" disabled selected>Elige tu Moneda </option>
         <option value="USD">Dolar Estadounidense</option>
         <option value="MXN">Peso Mexicano</option>
@@ -17,7 +17,7 @@
         <option value="EUR">Euros</option>
       </select>
 
-      <select id="criptomoneda" class="form-control">
+      <select class="js-cryptocurrency form-control">
         <option value="" disabled selected>Elige Criptomoneda</option>
       </select>
 
@@ -30,5 +30,7 @@
       <div id="resultado" class="col-12"></div>
     </div>
     <script src="./app.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./API.js"></script>
   </body>
 </html>
