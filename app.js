@@ -1,6 +1,7 @@
+
 const form = document.querySelector('.js-form');
 
-
+const ui = new Interface();
 
 form.addEventListener('submit', quote)
 
@@ -13,7 +14,7 @@ function quote(ev) {
   const selectedcrytoCurrency = crytoCurrencySelect.options[crytoCurrencySelect.selectedIndex].value
 
   if (selectedcurrency === '' || selectedcrytoCurrency === '') {
-    console.log('completa');
+    ui.showMesage('Todos los campos son obligatorios', 'alert');
   } else {
     console.log('bien');
 
