@@ -1,7 +1,8 @@
+const api = new Api('f8d165fc79caa15f493934f4b3c05477f9bcd48b7da79b1e005d60310e653a43');
+const ui = new Interface();
 
 const form = document.querySelector('.js-form');
 
-const ui = new Interface();
 
 form.addEventListener('submit', quote)
 
@@ -16,7 +17,12 @@ function quote(ev) {
   if (selectedcurrency === '' || selectedcrytoCurrency === '') {
     ui.showMesage('Todos los campos son obligatorios', 'alert');
   } else {
-    console.log('bien');
+    api.optainValue(currencySelect, crytoCurrencySelect)
+      .then(data => {
+        ui.pintResult(data.result.RAW, selectedcurrency, selectedcrytoCurrency);
+
+      }
+      )
 
   }
 
