@@ -26,6 +26,7 @@ class Interface {
   showMesage(mensaje, clases) {
     const div = document.createElement('div');
     div.className = clases;
+    div.classList.add('border', 'border-danger');
     div.appendChild(document.createTextNode(mensaje));
 
     const divMesage = document.querySelector('.js-mensage');
@@ -49,7 +50,7 @@ class Interface {
       update = new Date(currencyData.LASTUPDATE * 1000).toLocaleDateString('es-SPAIN');
 
 
-    let html = `<div class="card"> 
+    let html = `<div class="card border border-info p-3 border bg-light"> 
 <h2>Resultado</h2>
 <p>Precio de ${currencyData.FROMSYMBOL} a ${currencyData.TOSYMBOL} es de: $ ${price}</p>
 <p> Variación: ${currencyData.CHANGEPCTDAY.toFixed(2)}%</p>

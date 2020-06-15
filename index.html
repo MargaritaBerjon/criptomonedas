@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link rel="stylesheet" href="./main.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="d-inline-flex flex-column justify-content-center align-items-center vh-100 vw-100">
     <h1>Cotiza Criptomonedas al Instante</h1>
     <form class="js-form">
-      <select class="js-currency">
+      <select class="js-currency form-control">
         <option value="" disabled selected>Elige tu Moneda </option>
         <option value="USD">Dolar Estadounidense</option>
         <option value="MXN">Peso Mexicano</option>
@@ -21,7 +22,7 @@
         <option value="" disabled selected>Elige Criptomoneda</option>
       </select>
 
-      <input type="submit" class="btn btn-success" value="Cotizar" />
+      <input type="submit" class="btn btn-info" value="Cotizar" />
     </form>
 
     <div class="panel-resultados row justify-content-center mt-5">
